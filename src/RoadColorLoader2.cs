@@ -96,6 +96,7 @@ namespace RoadColorChangerContinued
             RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtSmall3LRoad", path);
             RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtSmall4LRoad", path);
             RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtMediumRoad", path);
+            RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtMediumRoadTL", path);
             RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtXLargeRoad", path);
             RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtLargeRoad", path);
             RoadColorChanger2.ChangeColor(arActive, config.highway_red, config.highway_green, config.highway_blue, "NExtSmall3LRoadTunnel", path);
