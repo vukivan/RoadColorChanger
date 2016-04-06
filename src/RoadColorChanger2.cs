@@ -19,8 +19,6 @@ namespace RoadColorChangerContinued
         {
             Texture2D texture = new Texture2D(Singleton<NetManager>.instance.m_lodAprAtlas.width, NetManager.instance.m_lodAprAtlas.height);
             texture.anisoLevel = 8;
-
-
             int y = 0;
             while (y < texture.height)
             {
@@ -38,24 +36,15 @@ namespace RoadColorChangerContinued
                         texture.SetPixel(x, y, Singleton<NetManager>.instance.m_lodAprAtlas.GetPixel(x, y));
                     }
                     ++x;
-
-
                 }
                 ++y;
-
             }
-
             texture.Apply();
-
             Singleton<NetManager>.instance.m_lodAprAtlas = texture;
-
-
         }
 
         public static Texture2D LoadTextureDDS(string texturePath)
         {
-
-
             var ddsBytes = File.ReadAllBytes(texturePath);
             var height = BitConverter.ToInt32(ddsBytes, 12);
             var width = BitConverter.ToInt32(ddsBytes, 16);
@@ -78,7 +67,7 @@ namespace RoadColorChangerContinued
 
         }
 
-        public static void ChangeColor(bool ar_enabled, float red, float green, float blue, string roadtype, string dir)
+        public static void ChangeColor(float red, float green, float blue, string roadtype, string dir)
         {
             var collection = UnityEngine.Object.FindObjectsOfType<NetCollection>();
             foreach (var nc in collection)

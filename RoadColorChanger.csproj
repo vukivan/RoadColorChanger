@@ -32,8 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src\Configuration2.cs" />
-    <Compile Include="src\Hook4.cs" />
-    <Compile Include="src\RedirectionHelper.cs" />
     <Compile Include="src\RoadColorChanger2.cs" />
     <Compile Include="src\RoadColorLoader2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
