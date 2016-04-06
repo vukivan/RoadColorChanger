@@ -41,11 +41,12 @@ namespace RoadColorChangerContinued
             {
                 foreach (var prefab in nc.m_prefabs)
                 {
-                    if (prefab.m_class.name.Equals(roadtype))
+                    if (prefab.m_class.name.ToLower().Contains(roadtype))
                     {
                         prefab.m_color = new Color(red, green, blue);
 
                         /* This is special case, since we need to load textures */
+                        /* TODO: Shoud be a separate function */
                         if (prefab.m_class.name.Equals("Highway"))
                         {
 
@@ -89,12 +90,18 @@ namespace RoadColorChangerContinued
 
             foreach (var nn in Singleton<NetManager>.instance.m_nodes.m_buffer)
             {
-                nn.Info.m_color = new Color(red, green, blue);
+                if (nn.Info.m_class.name.ToLower().Contains(roadtype))
+                {
+                    nn.Info.m_color = new Color(red, green, blue);
+                }
             }
 
             foreach (var ns in Singleton<NetManager>.instance.m_segments.m_buffer)
             {
-                ns.Info.m_color = new Color(red, green, blue);
+                if (ns.Info.m_class.name.ToLower().Contains(roadtype))
+                {
+                    ns.Info.m_color = new Color(red, green, blue);
+                }
             }
         }
 
