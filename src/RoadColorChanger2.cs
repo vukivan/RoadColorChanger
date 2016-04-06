@@ -10,35 +10,6 @@ namespace RoadColorChangerContinued
 
     public class RoadColorChanger2 : MonoBehaviour
     {
-
-        public static void ReplaceLodAprAtlas(string dir)
-        {
-            Texture2D texture = new Texture2D(Singleton<NetManager>.instance.m_lodAprAtlas.width, NetManager.instance.m_lodAprAtlas.height);
-            texture.anisoLevel = 8;
-            int y = 0;
-            while (y < texture.height)
-            {
-                int x = 0;
-
-                while (x < texture.width)
-                {
-
-                    if (NetManager.instance.m_lodAprAtlas.GetPixel(x, y).b > 0)
-                    {
-                        texture.SetPixel(x, y, new Color(Singleton<NetManager>.instance.m_lodAprAtlas.GetPixel(x, y).r, Singleton<NetManager>.instance.m_lodAprAtlas.GetPixel(x, y).g, 1));
-                    }
-
-                    else {
-                        texture.SetPixel(x, y, Singleton<NetManager>.instance.m_lodAprAtlas.GetPixel(x, y));
-                    }
-                    ++x;
-                }
-                ++y;
-            }
-            texture.Apply();
-            Singleton<NetManager>.instance.m_lodAprAtlas = texture;
-        }
-
         public static Texture2D LoadTextureDDS(string texturePath)
         {
             var ddsBytes = File.ReadAllBytes(texturePath);
@@ -72,19 +43,10 @@ namespace RoadColorChangerContinued
                 {
                     if (prefab.m_class.name.Equals(roadtype))
                     {
-                        if (prefab.m_class.name.Equals("Train Track"))
-                        {
-                            if (prefab.name.Equals("Train Track"))
-                            {
-                                prefab.m_color = new Color(red, green, blue);
-                            }
-                        }
-                        else {
-                            prefab.m_color = new Color(red, green, blue);
-                        }
+                        prefab.m_color = new Color(red, green, blue);
 
-
-                        if (roadtype.Equals("Highway"))
+                        /* This is special case, since we need to load textures */
+                        if (prefab.m_class.name.Equals("Highway"))
                         {
 
                             foreach (var segment in prefab.m_segments)
@@ -127,33 +89,12 @@ namespace RoadColorChangerContinued
 
             foreach (var nn in Singleton<NetManager>.instance.m_nodes.m_buffer)
             {
-                if (roadtype.Equals("Train Track"))
-                {
-                    if (nn.Info.name.Equals("Train Track"))
-                    {
-                        nn.Info.m_color = new Color(red, green, blue);
-                    }
-                }
-                else if (nn.Info.m_class.name.Equals(roadtype))
-                {
-                    nn.Info.m_color = new Color(red, green, blue);
-                }
+                nn.Info.m_color = new Color(red, green, blue);
             }
 
             foreach (var ns in Singleton<NetManager>.instance.m_segments.m_buffer)
             {
-                if (roadtype.Equals("Train Track"))
-                {
-                    if (ns.Info.name.Equals("Train Track"))
-                    {
-                        ns.Info.m_color = new Color(red, green, blue);
-                    }
-                }
-
-                else if (ns.Info.m_class.name.Equals(roadtype))
-                {
-                    ns.Info.m_color = new Color(red, green, blue);
-                }
+                ns.Info.m_color = new Color(red, green, blue);
             }
         }
 

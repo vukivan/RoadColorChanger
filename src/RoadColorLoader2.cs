@@ -48,22 +48,20 @@ namespace RoadColorChangerContinued
             RoadColorChanger2.ChangeColor(config.medium_road_red, config.medium_road_green, config.medium_road_blue, "Medium Road", path);
             RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "Small Road", path);
             RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "Electricity Dam", path);
-            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "Train Track", path);
-            RoadColorChanger2.ReplaceLodAprAtlas(path);
             RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "Highway", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExt2LAlley", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExt1LOneway", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtSmall3LRoad", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtSmall4LRoad", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtMediumRoad", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtMediumRoadTL", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtXLargeRoad", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtLargeRoad", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtSmall3LRoadTunnel", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtSmall4LRoadTunnel", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtMediumRoadTunnel", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtMediumRoadTLTunnel", path);
-            RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtXLargeRoadTunnel", path);
+            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "NExt2LAlley", path);
+            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "NExt1LOneway", path);
+            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "NExtSmall3LRoad", path);
+            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "NExtSmall4LRoad", path);
+            RoadColorChanger2.ChangeColor(config.medium_road_red, config.medium_road_green, config.medium_road_blue, "NExtMediumRoad", path);
+            RoadColorChanger2.ChangeColor(config.medium_road_red, config.medium_road_green, config.medium_road_blue, "NExtMediumRoadTL", path);
+            RoadColorChanger2.ChangeColor(config.large_road_red, config.large_road_green, config.large_road_blue, "NExtXLargeRoad", path);
+            RoadColorChanger2.ChangeColor(config.large_road_red, config.large_road_green, config.large_road_blue, "NExtLargeRoad", path);
+            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "NExtSmall3LRoadTunnel", path);
+            RoadColorChanger2.ChangeColor(config.small_road_red, config.small_road_green, config.small_road_blue, "NExtSmall4LRoadTunnel", path);
+            RoadColorChanger2.ChangeColor(config.medium_road_red, config.medium_road_green, config.medium_road_blue, "NExtMediumRoadTunnel", path);
+            RoadColorChanger2.ChangeColor(config.medium_road_red, config.medium_road_green, config.medium_road_blue, "NExtMediumRoadTLTunnel", path);
+            RoadColorChanger2.ChangeColor(config.large_road_red, config.large_road_green, config.large_road_blue, "NExtXLargeRoadTunnel", path);
 
             RoadColorChanger2.ChangeColor(config.highway_red, config.highway_green, config.highway_blue, "NExtPedRoad", path);
 
