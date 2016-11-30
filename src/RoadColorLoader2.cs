@@ -1,5 +1,5 @@
 ﻿using ICities;
-using ColossalFramework.Steamworks;
+using ColossalFramework.PlatformServices;
 using ColossalFramework.IO;
 
 using System;
@@ -15,11 +15,11 @@ namespace RoadColorChangerContinued
         public static string getModPath()
         {
             string workshopPath = ".";
-            foreach (PublishedFileId mod in Steam.workshop.GetSubscribedItems())
+            foreach (PublishedFileId mod in PlatformService.workshop.GetSubscribedItems())
             {
                 if (mod.AsUInt64 == RoadColorMod.workshop_id)
                 {
-                    workshopPath = Steam.workshop.GetSubscribedItemPath(mod);                    
+                    workshopPath = PlatformService.workshop.GetSubscribedItemPath(mod);                    
                     break;
                 }
             }

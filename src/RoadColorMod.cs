@@ -15,7 +15,7 @@ namespace RoadColorChangerContinued
 
         public string Description
         {
-            get { return "Changes road color. Fixed for version 1.4.0-f3"; }
+            get { return "Changes road color. Fixed for version 1.6"; }
         }
     }
 }
